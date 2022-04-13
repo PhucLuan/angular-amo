@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Route, Routes } from '@angular/router';
+import { AuthenticationGuard } from '../../core/authentication/authentication.guard';
 import { LayoutComponent } from './layout.component';
-
 //@Injectable()
 export class ShellService {
   //constructor() { }
@@ -14,7 +14,7 @@ export class ShellService {
         redirectTo: 'ahihi',
         pathMatch: 'full',
       }),
-      //canActivate: [true],
+      canActivate: [AuthenticationGuard],
       data: { reuse: true },
     };
   }
