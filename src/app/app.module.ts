@@ -21,7 +21,7 @@ import { HomeModule } from './features/home/home.module';
 //import { ManageuserComponent } from './features/manageuser/manageuser.component';
 //import { SidebarComponent } from './shared/sidebar/sidebar.component';
 //import { ManageassetComponent } from './features/manageasset/manageasset.component';
-import { TableComponent } from './features/home/table/table.component';
+//import { TableComponent } from './features/home/table/table.component';
 import { AuthInterceptorService } from './core/services/auth-interceptor.service';
 //import { NgbdDropdownBasic } from './shared/header/dropdown-basic/dropdown-basic';
 import { WelcomeComponent } from './features/welcome/welcome.component';
@@ -29,6 +29,7 @@ import { WelcomeComponent } from './features/welcome/welcome.component';
 import { ManageassetModule } from './features/manageasset/manageasset.module';
 import { LayoutModule } from './features/layout/layout.module';
 import { ManageuserModule } from './features/manageuser/manageuser.module';
+import { AuthenticationGuard } from './core/authentication/authentication.guard';
 
 export function configureAuth(oidcConfigService: OidcConfigService) {
   return () =>
@@ -49,7 +50,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
     //HeaderComponent,
     //ManageuserComponent,
     //SidebarComponent,
-    TableComponent,
+    //TableComponent,
     WelcomeComponent,
     //LayoutComponent,
     //NgbdDropdownBasic,
@@ -83,6 +84,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
       useClass: AuthInterceptorService,
       multi: true,
     },
+    AuthenticationGuard
   ],
   bootstrap: [AppComponent],
 })
