@@ -8,6 +8,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { StatePidePipe } from '../../core/pide/state-pide.pipe';
+import { HomeRoutingModule } from './home-routing.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,7 @@ import { StatePidePipe } from '../../core/pide/state-pide.pipe';
     MatPaginatorModule,
     MatSortModule,
     MatCardModule,
+    HomeRoutingModule,
   ],
   declarations: [HomeComponent, HomeTableComponent, StatePidePipe],
   providers: [HomeService],
