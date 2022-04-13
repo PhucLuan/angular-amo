@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HomeModule } from './features/home/home.module';
 //import { HeaderComponent } from './shared/header/header.component';
-import { ManageuserComponent } from './features/manageuser/manageuser.component';
+//import { ManageuserComponent } from './features/manageuser/manageuser.component';
 //import { SidebarComponent } from './shared/sidebar/sidebar.component';
 //import { ManageassetComponent } from './features/manageasset/manageasset.component';
 import { TableComponent } from './features/home/table/table.component';
@@ -28,6 +28,7 @@ import { WelcomeComponent } from './features/welcome/welcome.component';
 //import { LayoutComponent } from './features/layout/layout.component';
 import { ManageassetModule } from './features/manageasset/manageasset.module';
 import { LayoutModule } from './features/layout/layout.module';
+import { ManageuserModule } from './features/manageuser/manageuser.module';
 
 export function configureAuth(oidcConfigService: OidcConfigService) {
   return () =>
@@ -46,7 +47,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
   declarations: [
     AppComponent,
     //HeaderComponent,
-    ManageuserComponent,
+    //ManageuserComponent,
     //SidebarComponent,
     TableComponent,
     WelcomeComponent,
@@ -66,6 +67,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
     HomeModule,
     LayoutModule,
     ManageassetModule,
+    ManageuserModule,
     AppRoutingModule,
   ],
   providers: [
